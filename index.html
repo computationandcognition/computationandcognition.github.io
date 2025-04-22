@@ -80,36 +80,55 @@
             width: 180px;
         }
         
-        .speakers {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .speaker {
-            width: calc(33.333% - 20px);
-            min-width: 250px;
-            text-align: center;
-        }
-        
-        .speaker img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-        
-        .speaker h4 {
-            margin: 10px 0 5px;
-        }
-        
-        .speaker p {
-            margin: 5px 0;
-            font-style: italic;
-        }
-        
+	.speakers {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		margin-top: 30px;
+	}
+
+	.speaker {
+		display: flex;
+		align-items: flex-start;
+		text-align: left;
+		width: 100%;
+	}
+
+	.speaker-image {
+		flex-shrink: 0;
+		margin-right: 30px;
+	}
+
+	.speaker img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.speaker a {
+		text-decoration: underline;
+		color: inherit;
+	}
+
+	.speaker-info {
+		flex-grow: 1;
+	}
+
+	.speaker h4 {
+		margin: 0 0 5px;
+	}
+
+	.speaker .affiliation {
+		margin: 0 0 15px;
+		font-style: italic;
+	}
+
+	.speaker .bio {
+		margin: 0;
+		line-height: 1.5;
+	}        
+ 
         footer {
             background-color: #333;
             color: white;
@@ -190,31 +209,32 @@
         </div>
         
         <!-- Keynote Speakers Section -->
-        <div class="section">
-            <h2>Invited Speakers</h2>
-            <!--<div class="speakers">
-                <div class="speaker">
-                    <img src="/api/placeholder/200/200" alt="Prof. Jane Smith">
-                    <h4>Prof. Jane Smith</h4>
-                    <p>University of Example</p>
-                    <p>Expert in [Research Area]</p>
-                </div>
-                <div class="speaker">
-                    <img src="/api/placeholder/200/200" alt="Dr. John Doe">
-                    <h4>Dr. John Doe</h4>
-                    <p>Institute of Advanced Studies</p>
-                    <p>Leading researcher in [Research Area]</p>
-                </div>
-                <div class="speaker">
-                    <img src="/api/placeholder/200/200" alt="Prof. Maria Garcia">
-                    <h4>Prof. Maria Garcia</h4>
-                    <p>Technology University</p>
-                    <p>Pioneer in [Research Area]</p>
-                </div>
+       <div class="section">
+    <h2>Invited Speakers</h2>
+    <div class="speakers">
+        <div class="speaker">
+            <div class="speaker-image">
+                <img src="KEllis.jpeg" alt="Dr. Kevin Ellis">
+            </div>
+            <div class="speaker-info">
+                <h4>Dr. Kevin Ellis</h4>
+                <p class="affiliation">Cornell University</p>
+		<p class="bio"><a href="https://www.cs.cornell.edu/~ellisk/" target="_blank" rel="noopener noreferrer">Kevin Ellis</a> is an Assistant Professor in the Computer Science Department at Cornell University. His research is focused on Neuro-Symbolic AI, Program Synthesis, and Cognitive Science, and integrates symbolic reasoning with neural networks to develop human-like learning from limited data in AI. Dr. Ellis completed his Ph.D. at MIT, where he was advised by Dr. Josh Tenenbaum and Dr. Armando Solar-Lezama. He is perhaps best known for the <a href="https://dl.acm.org/doi/pdf/10.1145/3453483.3454080" target="_blank" rel="noopener noreferrer">Dreamcoder</a> paper.</p>
             </div>
         </div>
-        
-        Registration Section -->
+        <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://www.tshu.io/portrait_2018.jpg" alt="Dr. Tianmin Shu">
+            </div>
+            <div class="speaker-info">
+                <h4>Dr. Tianmin Shu</h4>
+                <p class="affiliation">Johns Hopkins University</p>
+		<p class="bio"><a href="https://www.tshu.io/" target="_blank" rel="noopener noreferrer">Tianmin Shu</a> is an Assistant Professor in the Department of Computer Science at Johns Hopkins University, with a secondary appointment in the Department of Cognitive Science. His research advances human-centered AI by integrating machine learning, RL, and social psychology to develop engineering machine social intelligence. His work encompasses areas such as model-based Theory of Mind reasoning, social scene understanding, neurosymbolic methods, and social learning. He completed his Ph.D. in Statistics at University of California, Los Angeles.</p>
+            </div>
+        </div>
+    </div>
+</div> 
+        <!--Registration Section -->
         <!--<div class="section">
             <h2>Registration</h2>
             <p>Registration for the conference is now open. Early bird rates are available until May 15, 2025.</p>
