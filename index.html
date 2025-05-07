@@ -20,24 +20,32 @@
             padding: 20px;
         }
         
-        .banner {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background: /*linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),*/ url('alexander_van_steenberge_unsplash.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .banner-text {
-            color: white;
-            z-index: 1;
-        }
+.banner {
+    position: relative; /* Scrolls with the page */
+    width: 100%;
+    height: 300px;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Dark overlay */
+        url('recraft2_b.png') no-repeat center top;
+    background-size: cover; /* Fills the banner, may need adjustment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.banner-text {
+    color: white;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Improves readability */
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+}
         
         h1 {
             font-size: 4rem;
@@ -153,6 +161,11 @@
     </style>
 </head>
 <body>
+<script>window.addEventListener('scroll', function() {
+    const banner = document.querySelector('.banner');
+    const scrollPosition = window.scrollY;
+    banner.style.backgroundPositionY = `${scrollPosition * 0.3}px`;
+});</script>
     <!-- Banner with Conference Title -->
     <div class="banner">
         <div class="banner-text">
@@ -298,8 +311,20 @@
     <footer>
             <p>Sponsors: Dalhousie University Department of Psychology and Neuroscience</p>	
 	    <p>&copy;2025 Computation and Cognition Conference. All rights reserved.</p>
-	    <p>Banner image by @<a href="https://unsplash.com/@lexerium" style="color: inherit;">lexerium</a>.</p>
-        <p>Dalhousie University • Department of Computer Science and Department of Psychology and Neuroscience</p>
+            <p>Dalhousie University • Department of Computer Science and Department of Psychology and Neuroscience</p>
     </footer>
+<script>
+    window.addEventListener('scroll', function() {
+        const banner = document.querySelector('.banner');
+        if (!banner) {
+            console.error('Banner element not found');
+            return;
+        }
+        const scrollPosition = window.scrollY;
+        const offset = scrollPosition * 0.5;
+        banner.style.backgroundPosition = `center ${offset}px`;
+        console.log(`ScrollY: ${scrollPosition}, BackgroundPositionY: ${offset}px`);
+    });
+</script>
 </body>
 </html>
