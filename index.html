@@ -173,6 +173,49 @@
 .register-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+.schedule {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.schedule th, .schedule td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule th {
+    background-color: #99ccff;
+    color: white;
+    font-weight: bold;
+}
+
+.schedule tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .schedule table {
+        font-size: 0.9rem;
+    }
+    
+    .schedule th, .schedule td {
+        padding: 8px;
+    }
+    
+    .schedule th:nth-child(3), .schedule td:nth-child(3) {
+        display: none; /* Hide Speaker/Description on small screens */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -211,6 +254,8 @@
 	    </ul>
 	    <p>We will have an exciting lineup of invited speakers, a poster session for students and faculty, and several parallel workshops. This event is open to all, whether you’d like to present a poster, network, or simply attend and enjoy the conversations. We encourage participation from researchers at all stages of their career from faculty to undergraduates, and from across a variety of methodologies - including engineers, experimentalists and theoreticians  -- investigating brain and behavior in humans, animals, and machines. Everyone is invited to join us and be a part of this exciting interdisciplinary exchange!
 </p>
+	       <p style="font-size: 1.5rem;">Registration is <strong>free</strong>.</p> 
+	       <p style="font-size: 1.75rem;"><a style="color: inherit;" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSd4JiCFHYxANA8yXQ3tEY5wtELceOjT3DQBI4ydnhhXl56lmQ/viewform" class="register-button">Register Now</a></p>
         </div>
         
         <!-- Call for Papers Section -->
@@ -229,7 +274,7 @@
                     <p>Schedule: coming soon!</p>
 	       </ul>
 	       <p style="font-size: 1.5rem;">Poster submission is now open. Registration is <strong>free</strong>.</p> 
-	       <p style="font-size: 1.75rem;"><a style="color: inherit;" href="https://docs.google.com/forms/d/e/1FAIpQLSd4JiCFHYxANA8yXQ3tEY5wtELceOjT3DQBI4ydnhhXl56lmQ/viewform" class="register-button">Register Now</a></p>
+	       <p style="font-size: 1.75rem;"><a style="color: inherit;" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSd4JiCFHYxANA8yXQ3tEY5wtELceOjT3DQBI4ydnhhXl56lmQ/viewform" class="register-button">Register and Submit Poster</a></p>
             </div>
         </div>
         
@@ -277,39 +322,70 @@
 		<p class="bio"><a href="https://medicine.dal.ca/departments/department-sites/psychiatry/our-people/faculty/abraham-nunes.html" target="_blank" rel="noopener noreferrer">Abraham Nunes</a> is an Assistant Professor in Psychiatry at Dalhousie University and director of the Computational Psychiatry Laboratory. He uses computational modeling and machine learning to study mental illness, particularly mood disorders. His mathematical work on heterogeneity spans ecology, economics, statistics, and statistical physics. Dr. Nunes is also a practicing psychiatrist and leads the ketamine therapy program at the QEII mood disorders clinic.</p>
             </div>
         </div>
-	<!--<p style="font-style: italic;">More speakers to be announced</p>--!>
+<!-- Conference Schedule Section -->
+<div class="section">
+    <h2>Conference Schedule</h2>
+    <div class="schedule">
+        <p>The Computation and Cognition Conference 2025 will take place on August 15, 2025, at the Kenneth C. Rowe Management Building, Dalhousie University. Below is the preliminary schedule. All times are in Atlantic Daylight Time (ADT).</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Speaker/Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 AM - 9:30 AM</td>
+                    <td>Opening Remarks</td>
+                    <td>Organizers</td>
+                </tr>
+                <tr>
+                    <td>9:30 AM - 10:30 AM</td>
+                    <td>Keynote: Computational Psychiatry (TBC)</td>
+                    <td>Dr. Abraham Nunes, Assistant Professor, Department of Psychiatry and Faculty of Computer Science, Dalhousie University</td>
+                </tr>
+                <tr>
+                    <td>10:30 AM - 11:00 AM</td>
+                    <td>Coffee Break</td>
+                    <td>Networking</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM - 12:00 PM</td>
+                    <td>Keynote: Neuro-Symbolic AI (TBC)</td>
+                    <td>Dr. Kevin Ellis, Assistant Professor, Department of Computer Science, Cornell University</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM - 1:30 PM</td>
+                    <td>Lunch Break</td>
+                    <td>Provided on-site</td>
+                </tr>
+                <tr>
+                    <td>1:30 PM - 2:30 PM</td>
+                    <td>Keynote: Infant Cognitive Development (TBC)</td>
+                    <td>Dr. Stephanie Denison, Professor and Associate Chair Graduate Affairs, Department of Psychology, University of Waterloo</td>
+                </tr>
+                <tr>
+                    <td>2:30 PM - 3:00 PM</td>
+                    <td>Coffee Break</td>
+                    <td>Networking</td>
+                </tr>
+                <tr>
+                    <td>3:00 PM - 4:00 PM</td>
+                    <td>Keynote: Social Cognitive AI (TBC)</td>
+                    <td>Dr. Tianmin Shu, Director, Social Cognitive AI Lab, and Assistant Professor, Department of Computer Science, Johns Hopkins University</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM - 5:00 PM</td>
+                    <td>Poster and Networking Session</td>
+                    <td>Student and faculty posters</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><em>Schedule subject to change. Talk titles to be confirmed (TBC). Check back for updates.</em></p>
     </div>
-</div> 
-        <!--Registration Section -->
-        <!--<div class="section">
-            <h2>Registration</h2>
-            <p>Registration for the conference is now open. Early bird rates are available until May 15, 2025.</p>
-            <table style="width:100%; border-collapse: collapse; margin-top: 20px;">
-                <tr style="background-color: #f5f5f5;">
-                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Participant Type</th>
-                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Early Bird (until May 15)</th>
-                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Regular Rate</th>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #ddd;">Academic/Faculty</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$350</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$450</td>
-                </tr>
-                <tr style="background-color: #f5f5f5;">
-                    <td style="padding: 10px; border: 1px solid #ddd;">Student</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$200</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$250</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #ddd;">Industry Professional</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$450</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$550</td>
-                </tr>
-            </table>
-            <p style="margin-top: 20px;">Registration includes access to all sessions, conference materials, coffee breaks, and lunch for all conference days.</p>
-            <p>For registration inquiries, please contact: [email address]</p>
-	    </div>--!>
-        
+</div>
         <!-- Venue Section -->
         <div class="section">
             <h2>Venue</h2>
