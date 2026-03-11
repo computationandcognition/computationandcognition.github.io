@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computation and Cognition Conference 2025</title>
+    <title>Computation and Cognition Conference 2026</title>
     <style>
+        /* General Styling */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -12,131 +13,78 @@
             color: #333;
             line-height: 1.6;
         }
-        
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 10px;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .archive-button {
+            float: left;
+            background-color: #333;
+            color: white;
+            font-size: 17px;
+            padding: 14px 16px;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .archive-button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Banner Styling */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('recraft2.png') no-repeat center top;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px; /* Space for navbar */
+        }
+
+        .banner-text {
+            color: white;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Content Section */
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            margin-top: 50px; /* Space for navbar */
         }
-        
-.banner {
-    position: relative; /* Scrolls with the page */
-    width: 100%;
-    height: 300px;
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Dark overlay */
-        url('recraft2.png') no-repeat center top;
-    background-size: cover; /* Fills the banner, may need adjustment */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
 
-.banner-text {
-    color: white;
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Improves readability */
-}
-
-@media (max-width: 768px) {
-    .banner {
-        height: 300px;
-    }
-}
-        
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            margin-top: 40px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #ddd;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
-        
-        .dates {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        .dates h3 {
-            margin-top: 0;
-        }
-        
-        .dates ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .dates li {
-            margin-bottom: 10px;
-            display: flex;
-        }
-        
-        .date {
-            font-weight: bold;
-            width: 180px;
-        }
-        
-	.speakers {
-		display: flex;
-		flex-direction: column;
-		gap: 40px;
-		margin-top: 30px;
-	}
-
-	.speaker {
-		display: flex;
-		align-items: flex-start;
-		text-align: left;
-		width: 100%;
-	}
-
-	.speaker-image {
-		flex-shrink: 0;
-		margin-right: 30px;
-	}
-
-	.speaker img {
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		object-fit: cover;
-	}
-
-	.speaker a {
-		text-decoration: underline;
-		color: inherit;
-	}
-
-	.speaker-info {
-		flex-grow: 1;
-	}
-
-	.speaker h4 {
-		margin: 0 0 5px;
-	}
-
-	.speaker .affiliation {
-		margin: 0 0 15px;
-		font-style: italic;
-	}
-
-	.speaker .bio {
-		margin: 0;
-		line-height: 1.5;
-	}        
- 
+        /* Footer Styling */
         footer {
             background-color: #333;
             color: white;
@@ -144,311 +92,62 @@
             padding: 20px;
             margin-top: 40px;
         }
-        
+
         @media (max-width: 768px) {
-            .banner {
-                height: 300px;
+            .navbar a, .archive-button {
+                font-size: 14px;
+                padding: 12px 14px;
             }
-            
-            h1 {
+
+            .banner-text h1 {
                 font-size: 2rem;
             }
-            
-            .speaker {
-                width: 100%;
-            }
         }
-.register-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #99ccff; /* Blue background */
-    color: white; /* White text */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1.75rem;
-    font-weight: bold;
-    transition: background-color 0.3s; /* Smooth hover effect */
-}
-
-.register-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-.schedule {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.schedule table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.schedule th, .schedule td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.schedule th {
-    background-color: #99ccff;
-    color: white;
-    font-weight: bold;
-}
-
-.schedule tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-@media (max-width: 768px) {
-    .schedule table {
-        font-size: 0.9rem;
-    }
-    
-    .schedule th, .schedule td {
-        padding: 8px;
-    }
-    
-    .schedule th:nth-child(3), .schedule td:nth-child(3) {
-        display: none; /* Hide Speaker/Description on small screens */
-    }
-}
-
     </style>
 </head>
 <body>
-<script>window.addEventListener('scroll', function() {
-    const banner = document.querySelector('.banner');
-    const scrollPosition = window.scrollY;
-    banner.style.backgroundPositionY = `${scrollPosition * 0.3}px`;
-});</script>
+
+    <!-- Navbar with Simple Archive Button -->
+    <div class="navbar">
+        <button class="archive-button" onclick="window.location.href='/2025/index.html'">Computation and Cognition 2025</button>
+    </div>
+
     <!-- Banner with Conference Title -->
     <div class="banner">
         <div class="banner-text">
-            <h1 style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Computation and Cognition Conference 2025</h1>
-            <h3 style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-size: 2.5rem;">August 15 2025 • Dalhousie University • Halifax, Canada</h3>
+            <h1>Computation and Cognition Conference 2026</h1>
+            <h3>13 August 2026 • Dalhousie University • Halifax, Canada</h3>
         </div>
     </div>
-    
+
+    <!-- Content Section -->
     <div class="container">
-        <!-- Introduction Section -->
-        <div class="section">
-            <h2>Join us for CCC 2025</h2>
-	    <p>If you're looking for opportunities to share your research on the intersection of cognition, AI, and neuroscience, or if you want to connect with peers, network with potential collaborators, and engage with new ideas, join us for the Computation and Cognition Conference in Halifax on <b>August 15 2025</b>.
-</p>
-            <p>The conference provides a forum for researchers in cognitive science, neuroscience, and AI, focused on understanding the computations that underlie behavior. Our goal is to deepen and strengthen the interactions between our disciplines, and to discover the ways in which each research community can benefit from the successes of others.
-</p>
-	    <p>We encourage participation from engineers, experimentalists and theoreticians investigating brain and behaviour in humans and animals. Our discussions will cover research in the following areas, as well as many others:</p>
-	    <ul>
-		<li>Understanding commonalities and differences between biological and AI systems</li>
-		<li>Using techniques from ML and AI to model brain and behaviors, and building biologically-inspired AI</li>
-		<li>Understanding how people reason in real-world tasks through the lens of computation</li>
-		<li>Measuring and expanding the representational competencies of modern AI systems</li>
-		<li>Mechanistic interpretability of deep neural network models and the science of deep learning</li>
-		<li>Revealing principles of brain connectivity and dynamics at multiple scales</li>
-		<li>Using psychophysical techniques to relate sensory inputs to behavioral responses</li>
-		<li>Developing cognitive- or neural-level models of perception, cognition, emotion, and action</li>
-		<li>Representation learning and representational alignment</li>
-	    </ul>
-	    <p>We will have an exciting lineup of invited speakers, a poster session for students and faculty, and several parallel workshops. This event is open to all, whether you’d like to present a poster, network, or simply attend and enjoy the conversations. We encourage participation from researchers at all stages of their career from faculty to undergraduates, and from across a variety of methodologies - including engineers, experimentalists and theoreticians  -- investigating brain and behavior in humans, animals, and machines. Everyone is invited to join us and be a part of this exciting interdisciplinary exchange!
-</p>
-	       <p style="font-size: 1.5rem;">Registration is <strong>free</strong>.</p> 
-	       <p style="font-size: 1.75rem;"><a style="color: inherit;" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSd4JiCFHYxANA8yXQ3tEY5wtELceOjT3DQBI4ydnhhXl56lmQ/viewform" class="register-button">Register Now</a></p>
-        </div>
-        
-        <!-- Call for Papers Section -->
-        <div class="section">
-            <h2>Call for Posters</h2>
-	    <P>Poster spots are assigned on a first-come, first-served basis, with a set number reserved per CS and Psychology. Confirmed presenters will receive further details. To help up plan and allocate space for your posters, we need to have your poster abstract in advance. There are two Best Poster Awards, chosen by the organizing committee.</p>
-	    <p><strong>Poster Dimensions</strong>: posters can be horizontal or vertical, with maximum dimentions of 30x40 or 40x30 inches. </p>
-        
-        <!-- Important Dates Section -->
-        <!--<div class="section">
-	<h2>Schedule</h2>-->
-            <div class="dates">
-                <ul>
-                    <li><span class="date">June 15, 2025</span> Poster abstract submission opens</li>
-                    <li><span class="date">August 1, 2025</span> Poster abstract submission deadline</li>
-		    <p>The poster session will be held on August 15, 9:00 AM - 5:00 PM</p>
-	       </ul>
-	       <p style="font-size: 1.5rem;">Poster submission is now open. Registration is <strong>free</strong>.</p> 
-	       <p style="font-size: 1.75rem;"><a style="color: inherit;" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSd4JiCFHYxANA8yXQ3tEY5wtELceOjT3DQBI4ydnhhXl56lmQ/viewform" class="register-button">Register and Submit Poster</a></p>
-            </div>
-        </div>
-        
-        <!-- Keynote Speakers Section -->
-       <div class="section">
-    <h2>Invited Speakers</h2>
-    <div class="speakers">
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://www.tshu.io/portrait_2018.jpg" alt="Dr. Tianmin Shu">
-            </div>
-            <div class="speaker-info">
-                <h4>Dr. Tianmin Shu</h4>
-                <p class="affiliation">Johns Hopkins University</p>
-		<p class="bio"><a href="https://www.tshu.io/" target="_blank" rel="noopener noreferrer">Tianmin Shu</a> is an Assistant Professor in the Department of Computer Science at Johns Hopkins University, with a secondary appointment in the Department of Cognitive Science. His research advances human-centered AI by integrating machine learning, RL, and social psychology to develop engineering machine social intelligence. His work encompasses areas such as model-based Theory of Mind reasoning, social scene understanding, neurosymbolic methods, and social learning. He completed his Ph.D. in Statistics at University of California, Los Angeles.</p>
-            </div>
-	</div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="StephanieDenison.jpg" alt="Dr. Stephanie Denison">
-            </div>
-            <div class="speaker-info">
-                <h4>Dr. Stephanie Denison</h4>
-                <p class="affiliation">University of Waterloo</p>
-		<p class="bio"><a href="https://uwaterloo.ca/psychology/profiles/stephanie-denison" target="_blank" rel="noopener noreferrer">Stephanie Denison</a> is a Professor of Psychology at the University of Waterloo. Dr. Denison primarily studies infant and child development from a cognitive science perspective, examining questions about the origins of the mind and the domain-general statistical learning mechanisms that young learners have access to, as well as how those interact with domain-specific learning mechanisms. She also examines the development of heuristics and biases, and how algorithmic strategies for updating information (such as variants of simple algorithms like “win-stay, lose-shift”) characterize children’s belief revision over time.</p>
-            </div>
-        </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://i1.rgstatic.net/ii/profile.image/11431281292454139-1732575209384_Q512/Abraham-Nunes-2.jpg" alt="Dr. Abraham Nunes">
-            </div>
-            <div class="speaker-info">
-                <h4>Dr. Abraham Nunes</h4>
-                <p class="affiliation">Dalhousie University</p>
-		<p class="bio"><a href="https://medicine.dal.ca/departments/department-sites/psychiatry/our-people/faculty/abraham-nunes.html" target="_blank" rel="noopener noreferrer">Abraham Nunes</a> is an Assistant Professor in Psychiatry at Dalhousie University and director of the Computational Psychiatry Laboratory. He uses computational modeling and machine learning to study mental illness, particularly mood disorders. His mathematical work on heterogeneity spans ecology, economics, statistics, and statistical physics. Dr. Nunes is also a practicing psychiatrist and leads the ketamine therapy program at the QEII mood disorders clinic.</p>
-            </div>
-        </div>
-	<div class="speaker">
-            <div class="speaker-image">
-                <img src="KEllis.jpeg" alt="Dr. Kevin Ellis">
-            </div>
-            <div class="speaker-info">
-                <h4>Dr. Kevin Ellis</h4>
-                <p class="affiliation">Cornell University</p>
-		<p class="bio"><a href="https://www.cs.cornell.edu/~ellisk/" target="_blank" rel="noopener noreferrer">Kevin Ellis</a> is an Assistant Professor in the Computer Science Department at Cornell University. His research is focused on Neuro-Symbolic AI, Program Synthesis, and Cognitive Science, and integrates symbolic reasoning with neural networks to develop human-like learning from limited data in AI. Dr. Ellis completed his Ph.D. at MIT, where he was advised by Dr. Josh Tenenbaum and Dr. Armando Solar-Lezama. He is perhaps best known for the <a href="https://dl.acm.org/doi/pdf/10.1145/3453483.3454080" target="_blank" rel="noopener noreferrer">Dreamcoder</a> paper.</p>
-            </div>
-        </div>
-<!-- Conference Schedule Section -->
-<div class="section">
-    <h2>Conference Schedule</h2>
-    <div class="schedule">
-        <p>The Computation and Cognition Conference 2025 will take place on August 15, 2025, at the Kenneth C. Rowe Management Building, Dalhousie University. Below is the preliminary schedule. All times are in Atlantic Daylight Time (ADT).</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Event</th>
-                    <th>Speaker/Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>8:30 AM - 9:00 AM</td>
-                    <td>Breakfast</td>
-                    <td>Provided on-site</td>
-                </tr>
-		<tr>
-                    <td>9:00 AM - 9:30 AM</td>
-                    <td>Opening Remarks</td>
-                    <td>Organizers</td>
-                </tr>
-                <tr>
-                    <td>9:30 AM - 10:30 AM</td>
-                    <td>Keynote: "Computational Models of Mental Illness: How Can we Achieve Clinical Utility?"</td>
-                    <td>Dr. Abraham Nunes, Assistant Professor, Department of Psychiatry and Faculty of Computer Science, Dalhousie University</td>
-                </tr>
-                <tr>
-                    <td>10:30 AM - 11:00 AM</td>
-                    <td>Coffee Break</td>
-                    <td>Networking</td>
-                </tr>
-                <tr>
-                    <td>11:00 AM - 12:00 PM</td>
-                    <td>Keynote: "Children's use of probability in social inferences"</td>
-                    <td>Dr. Stephanie Denison, Professor and Associate Chair Graduate Affairs, Department of Psychology, University of Waterloo</td>
-                </tr>
-                <tr>
-                    <td>12:00 PM - 1:30 PM</td>
-                    <td>Lunch Break</td>
-                    <td>Provided on-site</td>
-                </tr>
-                <tr>
-                    <td>1:30 PM - 2:30 PM</td>
-                    <td>Keynote: "Scaling Model-based Social Reasoning"</td>
-                    <td>Dr. Tianmin Shu, Director, Social Cognitive AI Lab, and Assistant Professor, Department of Computer Science, Johns Hopkins University</td>
-                </tr>
-                <tr>
-                    <td>2:30 PM - 3:00 PM</td>
-                    <td>Coffee Break</td>
-                    <td>Networking</td>
-                </tr>
-                <tr>
-                    <td>3:00 PM - 4:00 PM</td>
-                    <td>Keynote: TBD (Virtual)</td>
-                    <td>Dr. Kevin Ellis, Assistant Professor, Department of Computer Science, Cornell University</td>
-                </tr>
-                <tr>
-                    <td>4:00 PM - 5:00 PM</td>
-                    <td>Poster and Networking Session</td>
-                    <td>Student and faculty posters</td>
-                </tr>
-                <tr>
-                    <td>5:30 PM - 8:00 PM</td>
-                    <td>Post-Conference Reception</td>
-                    <td>Contact organisers for location, as places are limited. Please arrive by 6PM.</td>
-                </tr>
-            </tbody>
-        </table>
+        <h2>Welcome to the Computation and Cognition Conference 2026</h2>
+        <p>The Computation and Cognition Symposium (CCS) is an interdisciplinary event exploring the scientific connections between artificial and natural intelligence. CCS was first held in 2025 at Dalhousie University, and aims to promote collaboration across fields studying intelligent behaviour in humans, animals, and machines.</p>
+        <p>This year CCS 2026 will focus on how fundamental research and practice in AI, neuroscience, and psychology co-evolve and inform one another. Over a full day of invited talks, contributed posters, and networking, the symposium will bring together diverse perspectives from AI, cognitive science, developmental psychology, philosophy of science, neuroscience, and neuroengineering.</p>
+        <p>Across four invited talks, leading researchers will discuss how their fields are growing, changing and adapting in response to recent advances in AI and its increasing integration into science and society.</p>
+        <p>This symposium offers opportunities to hear about current research, connect with peers and potential collaborators, share your work, and explore how different research communities can benefit from one another’s success. We encourage participation from engineers, experimentalists, and theoreticians investigating brain and behaviour in humans, animals, and machines.</p>
+        <p>Discussions will include topics in the following areas, as well as many others:</p>
+        <ul>
+            <li>Understanding how intelligent behaviour in biological and artificial systems can inform one another</li>
+            <li>Using machine learning and AI methods to study brain and behaviour</li>
+            <li>Measuring and expanding the representational capacities of modern AI systems</li>
+            <li>Interpreting large neural network models and characterizing their internal representations</li>
+            <li>Emerging social cognition, cooperation, and (mis)alignment in multi-agent AI systems</li>
+            <li>Using modern LLMs as tools for studying human cognition and reasoning</li>
+            <li>Development and learning across biological and artificial systems (developmental psychology × AI)</li>
+            <li>Tool use, planning, and compositional reasoning in humans and machines</li>
+            <li>Bridging mechanistic neuroscience and machine learning models of cognition</li>
+        </ul>
+        <p>We will have an exciting lineup of invited speakers, a contributed poster session, and opportunities to connect and discuss new ideas. This event is open to all, whether you’d like to present a poster, learn about current research in brain, AI and behaviour, or simply attend and enjoy the conversations. We welcome participation from researchers at all career stages and methodological backgrounds.</p>
+        <p style="font-size: 1.5rem;">Registration is <strong>free</strong>.</p>
     </div>
-</div>
-        <!-- Venue Section -->
-        <div class="section">
-            <h2>Venue</h2>
-	    <!-- <p>The conference will be held at:</p>--!>
-		    <p style="font-size: 1.2rem;"><a style="color: inherit;" href="https://www.dal.ca/campus-maps/building-directory/studley-campus/rowe-management-building.html">Kenneth C. Rowe Management Building</a>,<br>
-		    Dalhousie University,<br>
-		    Halifax, Nova Scotia</p>
-            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.0435206195707!2d-63.59079182377071!3d44.63702747107249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a223b2a4df53f%3A0x405643f42dedb6e!2sKenneth%20C.%20Rowe%20Management%20Bldg%2C%206100%20University%20Ave%2C%20Halifax%2C%20NS%20B3H%201W7!5e0!3m2!1sen!2sca!4v1748353962511!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p> 
-        </div>
-        
-        <!-- Contact Section -->
-        <div class="section">
-            <h2>Organisers</h2>
-	    <!--<p>For any inquiries about the conference, please contact the organisers:</p>--!>
-            <p>Marta Kryven, Assistant Professor of Computer Science, Psychology and Neuroscience (marta.kryven@dal.ca)</p>
-            <p>Aaron Newman, Professor and Chair, Psychology and Neuroscience, Computer Science, Psychiatry, Surgery, Pediatrics</p>
-            <p>Raymond Klein, Professor Emeritus, Psychology and Neuroscience, Computer Science</p>
-            <p>Simal Dolek, Graduate Student, Psychology and Neuroscience (simal.dolek@dal.ca)</p>
-            <p>Ryan McCarthy, Event Coordinator, AI Institute</p>
-        </div>
-        <div class="section">
-            <h2>Program Committee</h2>
-            <p>Xuemin Yu, Graduate Student, Computer Science</p>
-            <p>Cameron Calder, Graduate Student, Medical Neuroscience</p>
-            <p>Robie Gonzales, Graduate Student, Computer Science</p>
-            <p>Max Mascini, Research Assistant, Psychology and Neuroscience</p>
-            <p>Ciaran Lawless, Research Assistant, Computer Science, Psychology and Neuroscience</p>
-        </div>
-	<div class="section">
-	    <h2>Sponsors</h2>
-	    <p>Dalhousie University, Department of Psychology and Neuroscience</p>
-	    <p>Dalhousie University, Faculty of Computer Science</p>
-	    <p>Dalhousie University, President's Office</p>
-	    <p>Dalhousie University, AI Institute</p>
-	</div>
-    </div>
-    
+
+    <!-- Footer Section -->
     <footer>
-            <p>Sponsors: Dalhousie University Department of Psychology and Neuroscience</p>	
-	    <p>&copy;2025 Computation and Cognition Conference. All rights reserved.</p>
-            <p>Dalhousie University • Department of Computer Science and Department of Psychology and Neuroscience</p>
+        <p>&copy;2026 Computation and Cognition Conference. All rights reserved.</p>
+        <p>Dalhousie University • Department of Computer Science and Department of Psychology and Neuroscience</p>
     </footer>
-<script>
-    window.addEventListener('scroll', function() {
-        const banner = document.querySelector('.banner');
-        if (!banner) {
-            console.error('Banner element not found');
-            return;
-        }
-        const scrollPosition = window.scrollY;
-        const offset = scrollPosition * 0.5;
-        banner.style.backgroundPosition = `center ${offset}px`;
-        console.log(`ScrollY: ${scrollPosition}, BackgroundPositionY: ${offset}px`);
-    });
-</script>
+
 </body>
 </html>
