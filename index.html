@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computation and Cognition Symposium 2026</title>
+    <title>Computation and Cognition Conference 2026</title>
     <style>
-        /* General Styling */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -13,60 +12,27 @@
             color: #333;
             line-height: 1.6;
         }
-
-        /* Navbar Styling */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            padding: 10px;
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
-        .navbar a {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .archive-button {
-            float: left;
-            background-color: #333;
-            color: white;
-            font-size: 17px;
-            padding: 14px 16px;
-            border: none;
-            cursor: pointer;
-            width: 200px;
-        }
-
-        .archive-button:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* Banner Styling */
+        
         .banner {
             position: relative;
             width: 100%;
             height: 300px;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('recraft2.png') no-repeat center top;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('recraft2.png') no-repeat center top;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-top: 50px; /* Space for navbar */
+            margin-bottom: 40px;
         }
 
         .banner-text {
@@ -75,16 +41,102 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        /* Content Section */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
+        @media (max-width: 768px) {
+            .banner {
+                height: 300px;
+            }
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .dates {
+            background-color: #f5f5f5;
             padding: 20px;
-            margin-top: 50px; /* Space for navbar */
+            border-radius: 5px;
+        }
+        
+        .dates h3 {
+            margin-top: 0;
+        }
+        
+        .dates ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .dates li {
+            margin-bottom: 10px;
+            display: flex;
+        }
+        
+        .date {
+            font-weight: bold;
+            width: 180px;
+        }
+        
+        .speakers {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 30px;
         }
 
-        /* Footer Styling */
+        .speaker {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            width: 100%;
+        }
+
+        .speaker-image {
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+
+        .speaker img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .speaker a {
+            text-decoration: underline;
+            color: inherit;
+        }
+
+        .speaker-info {
+            flex-grow: 1;
+        }
+
+        .speaker h4 {
+            margin: 0 0 5px;
+        }
+
+        .speaker .affiliation {
+            margin: 0 0 15px;
+            font-style: italic;
+        }
+
+        .speaker .bio {
+            margin: 0;
+            line-height: 1.5;
+        }        
+ 
         footer {
             background-color: #333;
             color: white;
@@ -92,37 +144,194 @@
             padding: 20px;
             margin-top: 40px;
         }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .speaker {
+                width: 100%;
+            }
+        }
+
+        .register-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #99ccff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.75rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .register-button:hover {
+            background-color: #0056b3;
+        }
+
+        .schedule {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .schedule table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .schedule th, .schedule td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .schedule th {
+            background-color: #99ccff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .schedule tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
 
         @media (max-width: 768px) {
-            .navbar a, .archive-button {
-                font-size: 14px;
-                padding: 12px 14px;
+            .schedule table {
+                font-size: 0.9rem;
             }
+            
+            .schedule th, .schedule td {
+                padding: 8px;
+            }
+            
+            .schedule th:nth-child(3), .schedule td:nth-child(3) {
+                display: none;
+            }
+        }
 
-            .banner-text h1 {
-                font-size: 2rem;
+        /* ────────────────────────────────────────────────
+           Top Navigation + Archive Dropdown
+        ───────────────────────────────────────────────── */
+
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #333;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 12px 20px;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .dropbtn:hover {
+            background-color: #555;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            min-width: 220px;
+            background-color: #333;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+            z-index: 1;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 2px; /* small bridge to prevent disappearing on hover */
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .top-nav {
+                padding: 0 15px;
+                height: 50px;
+            }
+            
+            .dropbtn {
+                padding: 10px 16px;
+                font-size: 16px;
+            }
+            
+            .dropdown-content {
+                min-width: 180px;
+                right: 0;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar with Simple Archive Button -->
-    <div class="navbar">
-        <button class="archive-button" onclick="window.location.href='/2025/index.html'">2025</button>
-    </div>
-
-    <!-- Banner with Conference Title -->
-    <div class="banner">
-        <div class="banner-text">
-            <h1>Computation and Cognition Symposium 2026</h1>
-            <h3>13 August 2026 • Dalhousie University • Halifax, Canada</h3>
+<!-- Top Navigation Bar with Archive Dropdown -->
+<div class="top-nav">
+    <div class="nav-right">
+        <div class="dropdown">
+            <button class="dropbtn">Archive</button>
+            <div class="dropdown-content">
+                <a href="2025/index.html">Computation and Cognition 2025</a>
+            </div>
         </div>
     </div>
+</div>
 
-    <!-- Content Section -->
-    <div class="container">
-        <h2>Welcome to the Computation and Cognition Symposium 2026</h2>
+<!-- Banner with Conference Title -->
+<div class="banner">
+    <div class="banner-text">
+        <h1 style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Computation and Cognition Conference 2026</h1>
+        <h3 style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-size: 2.5rem;">13 August 2026 • Dalhousie University • Halifax, Canada</h3>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Introduction Section -->
+    <div class="section">
+        <h2>Join us for CCC 2026</h2>
         <p>The Computation and Cognition Symposium (CCS) is an interdisciplinary event exploring the scientific connections between artificial and natural intelligence. CCS was first held in 2025 at Dalhousie University, and aims to promote collaboration across fields studying intelligent behaviour in humans, animals, and machines.</p>
         <p>This year CCS 2026 will focus on how fundamental research and practice in AI, neuroscience, and psychology co-evolve and inform one another. Over a full day of invited talks, contributed posters, and networking, the symposium will bring together diverse perspectives from AI, cognitive science, developmental psychology, philosophy of science, neuroscience, and neuroengineering.</p>
         <p>Across four invited talks, leading researchers will discuss how their fields are growing, changing and adapting in response to recent advances in AI and its increasing integration into science and society.</p>
@@ -135,19 +344,196 @@
             <li>Interpreting large neural network models and characterizing their internal representations</li>
             <li>Emerging social cognition, cooperation, and (mis)alignment in multi-agent AI systems</li>
             <li>Using modern LLMs as tools for studying human cognition and reasoning</li>
-            <li>Development and learning across biological and artificial systems (developmental psychology × AI)</li>
+            <li>Development and learning across biological and artificial systems (developmental psychology × AI</li>
             <li>Tool use, planning, and compositional reasoning in humans and machines</li>
             <li>Bridging mechanistic neuroscience and machine learning models of cognition</li>
         </ul>
         <p>We will have an exciting lineup of invited speakers, a contributed poster session, and opportunities to connect and discuss new ideas. This event is open to all, whether you’d like to present a poster, learn about current research in brain, AI and behaviour, or simply attend and enjoy the conversations. We welcome participation from researchers at all career stages and methodological backgrounds.</p>
-        <p style="font-size: 1.5rem;">Registration is <strong>free</strong>.</p>
+        <p style="font-size: 1.5rem;">Registration is <strong>free</strong>.</p> 
+        <!-- <p style="font-size: 1.75rem;"><a style="color: inherit;" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSd4JiCFHYxANA8yXQ3tEY5wtELceOjT3DQBI4ydnhhXl56lmQ/viewform" class="register-button">Register Now</a></p> -->
+    </div>
+    
+    <!-- Call for Papers Section -->
+    <div class="section">
+        <h2>Call for Posters</h2>
+        <p>Poster spots are limited and assigned on a first-come, first-served basis. To allocate space for your posters, we need to have your poster abstract in advance. If you wish to present a poster, you will need to indicate your poster title and approximate abstract during registration. Your abstract will be used to moderate submissions based on thematic fit.</p>
+        <p>Budget permitting, there may be two Best Poster Awards, chosen by the organizing committee.</p>
+        <p><strong>Poster Dimensions</strong>: posters can be horizontal or vertical, with maximum dimensions of 30x40 or 40x30 inches. </p>
+        
+        <!-- Important Dates Section -->
+        <div class="dates">
+            <ul>
+                <li><span class="date">June 15, 2026</span> Poster abstract submission opens</li>
+                <li><span class="date">August 1, 2026</span> Poster abstract submission deadline</li>
+            </ul>
+            <p>The poster session will be held on August 15, 9:00 AM - 5:00 PM</p>
+        </div>
+    </div>
+    
+    <!-- Keynote Speakers Section -->
+    <div class="section">
+        <h2>Invited Speakers</h2>
+        <div class="speakers">
+            <div class="speaker">
+                <div class="speaker-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23ec4899'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E" style="background-color: #8b5cf6; background-size: cover;" alt="placeholder">
+                </div>
+                <div class="speaker-info">
+                    <h4>TBD</h4>
+                    <p class="affiliation"></p>
+                    <p class="bio"></p>
+                </div>
+            </div>
+            <div class="speaker">
+                <div class="speaker-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23ec4899'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E" style="background-color: #8b5cf6; background-size: cover;" alt="placeholder">
+                </div>
+                <div class="speaker-info">
+                    <h4>TBD</h4>
+                    <p class="affiliation"></p>
+                    <p class="bio"></p>
+                </div>
+            </div>
+            <div class="speaker">
+                <div class="speaker-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23ec4899'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E" style="background-color: #8b5cf6; background-size: cover;" alt="placeholder">
+                </div>
+                <div class="speaker-info">
+                    <h4>TBD</h4>
+                    <p class="affiliation"></p>
+                    <p class="bio"></p>
+                </div>
+            </div>
+            <div class="speaker">
+                <div class="speaker-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' fill='%23ec4899'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E" style="background-color: #8b5cf6; background-size: cover;" alt="placeholder">
+                </div>
+                <div class="speaker-info">
+                    <h4>TBD</h4>
+                    <p class="affiliation"></p>
+                    <p class="bio"></p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy;2026 Computation and Cognition Conference. All rights reserved.</p>
-        <p>Dalhousie University • Department of Computer Science and Department of Psychology and Neuroscience</p>
-    </footer>
+    <!-- Conference Schedule Section -->
+    <div class="section">
+        <h2>Conference Schedule</h2>
+        <div class="schedule">
+            <p>The Computation and Cognition Conference 2026 will take place on August 13, 2026, at the Kenneth C. Rowe Management Building, Dalhousie University. Below is the preliminary schedule. All times are in Atlantic Daylight Time (ADT).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Event</th>
+                        <th>Speaker/Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:30 AM - 9:00 AM</td>
+                        <td>Breakfast</td>
+                        <td>Provided on-site</td>
+                    </tr>
+                    <tr>
+                        <td>9:00 AM - 9:30 AM</td>
+                        <td>Opening Remarks</td>
+                        <td>Organizers</td>
+                    </tr>
+                    <tr>
+                        <td>9:30 AM - 10:30 AM</td>
+                        <td>Keynote: TBD</td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>10:30 AM - 11:00 AM</td>
+                        <td>Coffee Break</td>
+                        <td>Networking</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM - 12:00 PM</td>
+                        <td>Keynote: TBD</td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 PM - 1:30 PM</td>
+                        <td>Lunch Break</td>
+                        <td>Provided on-site</td>
+                    </tr>
+                    <tr>
+                        <td>1:30 PM - 2:30 PM</td>
+                        <td>Keynote: TBD</td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM - 3:00 PM</td>
+                        <td>Coffee Break</td>
+                        <td>Networking</td>
+                    </tr>
+                    <tr>
+                        <td>3:00 PM - 4:00 PM</td>
+                        <td>Keynote: TBD</td>
+                        <td>TBD</td>
+                    </tr>
+                    <tr>
+                        <td>4:00 PM - 5:00 PM</td>
+                        <td>Poster and Networking Session</td>
+                        <td>Student and faculty posters</td>
+                    </tr>
+                    <tr>
+                        <td>5:30 PM - 8:00 PM</td>
+                        <td>Post-Conference Reception</td>
+                        <td>Contact organisers for location, as places are limited. Please arrive by 6PM.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Venue Section -->
+    <div class="section">
+        <h2>Venue</h2>
+        <p style="font-size: 1.2rem;"><a style="color: inherit;" href="https://www.dal.ca/campus-maps/building-directory/studley-campus/rowe-management-building.html">Kenneth C. Rowe Management Building</a>,<br>
+        Dalhousie University,<br>
+        Halifax, Nova Scotia</p>
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.0435206195707!2d-63.59079182377071!3d44.63702747107249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a223b2a4df53f%3A0x405643f42dedb6e!2sKenneth%20C.%20Rowe%20Management%20Bldg%2C%206100%20University%20Ave%2C%20Halifax%2C%20NS%20B3H%201W7!5e0!3m2!1sen!2sca!4v1748353962511!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p> 
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="section">
+        <h2>Organisers</h2>
+        <p>Marta Kryven, Assistant Professor of Computer Science, Psychology and Neuroscience (marta.kryven@dal.ca)</p>
+        <p>Aaron Newman, Professor and Chair, Psychology and Neuroscience, Computer Science, Psychiatry, Surgery, Pediatrics</p>
+    </div>
+    <div class="section">
+        <h2>Program Committee</h2>
+        <p>Max Mascini, Research Assistant, Psychology and Neuroscience</p>
+        <p>Ciaran Lawless, Research Assistant, Computer Science, Psychology and Neuroscience</p>
+        <p>Marta Kryven, Assistant Professor of Computer Science, Psychology and Neuroscience (marta.kryven@dal.ca)</p>
+        <p>Aaron Newman, Professor and Chair, Psychology and Neuroscience, Computer Science, Psychiatry, Surgery, Pediatrics</p>
+    </div>
+    <div class="section">
+        <h2>Sponsors</h2>
+        <p>Dalhousie University, Department of Psychology and Neuroscience</p>
+        <p>Dalhousie University, Faculty of Computer Science</p>
+        <p>Dalhousie University, President's Office</p>
+        <p>Dalhousie University, AI Institute</p>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const banner = document.querySelector('.banner');
+        if (!banner) {
+            console.error('Banner element not found');
+            return;
+        }
+        const scrollPosition = window.scrollY;
+        const offset = scrollPosition * 0.5;
+        banner.style.backgroundPosition = `center ${offset}px`;
+    });
+</script>
 
 </body>
 </html>
